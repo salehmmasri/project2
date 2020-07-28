@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>show</title>
+</head>
+
+<body>
+    <% alldata.forEach(val=>{%>
+    <div style="background-color: aqua;">
+        <p><%=val.team%></p>
+        <img src="<%=val.img_url%>" alt="" srcset="">
+        <p><%=val.stadium%></p>
+        <p><%=val.league%></p>
+        <form action="/showdetails/<%=val.id%>" method="post">
+            <input type="text" name="team" id="" value="<%=val.team%>">
+            <input type="text" name="img_url" id="" value="<%=val.img_url%>">
+            <input type="text" name="stadium" id="" value="<%=val.stadium%>">
+            <input type="text" name="league" id="" value="<%=val.league%>">
+            <input type="submit" value="show in details">
+        </form>
+    </div>
+    <%})%>
+</body>
+
+</html>

@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DETAILS</title>
+</head>
+
+<body>
+    <section>
+        <p><%=selected.team%></p>
+        <img src="<%=selected.img_url%>" alt="" srcset="" width="350">
+        <p><%=selected.stadium%></p>
+        <p><%=selected.league%></p>
+        <form action="/update/<%=selected.id%>?_method=put" method="post">
+            <input type="text" name="team" id="" value="<%=selected.team%>">
+            <input type="text" name="img_url" id="" value="<%=selected.img_url%>">
+            <input type="text" name="stadium" id="" value="<%=selected.stadium%>">
+            <input type="text" name="league" id="" value="<%=selected.league%>">
+            <input type="submit" value="update">
+        </form>
+<form action="/delete/<%=selected.id%>?_method=delete" method="post">
+<input type="submit" value="delete">
+</form>
+    </section>
+</body>
+
+</html>

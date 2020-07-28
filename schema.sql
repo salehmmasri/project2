@@ -1,0 +1,8 @@
+DROP TABLE IF EXISTS clup;
+CREATE TABLE clup(
+id SERIAL PRIMARY KEY,    
+team VARCHAR(255),
+img_url VARCHAR(255),
+stadium VARCHAR(255),
+league VARCHAR(255)
+);

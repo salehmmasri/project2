@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>index</title>
+</head>
+
+<body>
+
+
+    <% teams.forEach(val =>{%>
+    <p><%=val.team%></p>
+    <img src="<%=val.img_url%>" alt="" srcset="">
+    <p><%=val.stadium%></p>
+    <p><%=val.league%></p>
+
+    <form action="/addteamtoDBS" method="post">
+        <input type="text" name="team" id="" value="<%=val.team%>">
+        <input type="text" name="img_url" id="" value="<%=val.img_url%>">
+        <input type="text" name="stadium" id="" value="<%=val.stadium%>">
+        <input type="text" name="league" id="" value="<%=val.league%>">
+        <input type="submit" value="add-to-DBS">
+    </form>
+    <% });%>
+
+
+
+
+</body>
+
+</html>
